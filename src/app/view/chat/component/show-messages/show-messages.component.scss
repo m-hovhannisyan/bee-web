@@ -1,0 +1,62 @@
+
+.messages-container {
+   height: calc(100vh - 176px);
+   overflow-y: scroll;
+   padding-right: 5px;
+}
+
+.title {
+   width: calc(100% + 19px);
+   height: 50px;
+   background-color: #292D3E;
+   margin-left: -10px;
+   margin-top: -10px;
+   border-radius: 10px 10px 0px 0px;
+   align-items: center;
+   padding-left: 15px;
+}
+
+.connection-name {
+   color:aliceblue;
+   font-size: 20px
+}
+
+.text-message {
+   width: 100%;
+   position: absolute;
+   bottom: 0px;
+}
+
+.send-icon {
+   cursor: pointer;
+}
+
+.send-icon:hover {
+   mat-icon {
+      color: black;
+   }
+}
+
+.message-box {
+   color: white;
+   background-color: #656565;
+   padding: 10px;
+   word-break: break-word;
+   margin-bottom: 15px;
+   border-radius: 10px;
+}
+
+.name {
+   color: azure;
+   font-size: 14px;
+   font-weight: 100;
+}
+
+.your-message-box {
+   color: white;
+   background-color: #070041;
+   padding: 10px;
+   border-radius: 10px;
+   word-break: break-word;
+    margin-bottom: 15px;
+}

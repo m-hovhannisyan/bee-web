@@ -1,0 +1,82 @@
+app-form-field {
+  .form-control input,
+  .form-control textarea {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-family: Roboto-Regular;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    border: none;
+    caret-color: white !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .form-control textarea {
+    resize: none;
+  }
+  .input-group-container {
+    padding-bottom: 0px;
+  }
+  .input-group {
+    color: white;
+    background-color: #292d3e;
+    height: 44px;
+    box-sizing: border-box;
+  }
+  .form-control-suffix {
+    margin-right: 15px;
+    i {
+      color: #d6d6d6;
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// theming strategy
+// -----------------------------------------------------------------------------
+
+app-form-field {
+  &.mat-primary .form-control {
+    color: white;
+    background-color: #292d3e;
+  }
+  &.mat-accent .form-control {
+    color: white;
+    background-color: #292d3e;
+    display: flex;
+    align-items: center;
+    border: none !important;
+  }
+  &.mat-accent.mat-form-field .form-control-prefix [matprefix],
+  &.mat-accent.mat-form-field .form-control-suffix [matsuffix] {
+    color: var(--primary-color);
+  }
+  mat-error + mat-error {
+    display: none;
+  }
+
+  .mat-form-field-subscript-wrapper {
+    font-size: 12px;
+    padding: 0 15px;
+    top: calc(100% - 1.8rem) !important;
+  }
+  &.mat-form-field-disabled .form-control-prefix,
+  &.mat-form-field-disabled .form-control-suffix,
+  &.mat-form-field-disabled .form-control input,
+  &.mat-form-field-disabled .form-control textarea {
+    cursor: not-allowed;
+    user-select: none !important;
+  }
+}
+.mat-input-element::-webkit-input-placeholder {
+  color: #d6d6d6 !important;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: Roboto-Regular;
+  font-style: normal;
+  font-weight: normal;
+}

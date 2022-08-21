@@ -1,0 +1,13 @@
+<div class="w-100 h-100 view-chats">
+  <div class="header">
+    <div (click)="logOut()" class="log-out">Log Out</div>
+  </div>
+  <div class="w-100 components d-flex">
+    <div class="h-100 connections">
+      <app-select-chat></app-select-chat>
+    </div>
+    <div class="h-100 messages">
+      <app-show-messages></app-show-messages>
+    </div>
+  </div>
+</div>

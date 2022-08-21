@@ -1,0 +1,37 @@
+.title {
+   font-size: 25px;
+   font-weight: 800;
+   color: blueviolet;
+}
+
+.sign-up-container {
+   width: 250px;
+}
+
+.signup-button {
+   width: 200px;
+   height: 50px;
+   border-radius: 25px;
+}
+
+.wrong-email {
+   font-size: 14px;
+   color: red;
+   text-align: center;
+}
+
+.box {
+   height: 30px;
+}
+
+.go-login {
+   font-size: 20px;
+   font-weight: 800;
+   color: blueviolet;
+}
+
+.go-login:hover {
+   font-size: 22px;
+   font-weight: 900;
+   cursor: pointer;
+}

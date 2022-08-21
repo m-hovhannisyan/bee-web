@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+.field-theme-color{
+  .mat-form-field-wrapper{
+    .mat-form-field-underline{
+      background-color: var(--placeholder-color) !important;
+    }
+  }
+  .mat-form-field-wrapper{
+    .mat-form-field-infix{
+      .mat-form-field-label {
+        color: var(--placeholder-color);
+      }
+    }
+  }
+}
+
+.mat-form-field{
+  .mat-select-trigger{
+    height: auto !important;
+  }
+}
+
+
+.scroll-design::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/* Track */
+.scroll-design::-webkit-scrollbar-track {
+  background: #00000007;
+  border-radius: 5px;
+}
+
+/* Handle */
+.scroll-design::-webkit-scrollbar-thumb {
+  background: #292d3e;
+  border-radius: 5px;
+}
+/* Handle on hover */
+.scroll-design::-webkit-scrollbar-thumb:hover {
+  background: #292d3e;
+}
+.scroll-design {
+  scrollbar-width: thin;
+  scrollbar-color: #292d3e rgba(0, 0, 0, 0.034);
+  .ql-container {
+    height: auto;
+  }
+}
+
+.scroll-design {
+  .cdk-virtual-scroll-viewport::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .cdk-virtual-scroll-viewport::-webkit-scrollbar-track {
+    background: #00000007;
+    border-radius: 5px;
+  }
+
+  .cdk-virtual-scroll-viewport::-webkit-scrollbar-thumb {
+    background: #292d3e !important;
+    border-radius: 5px !important;
+  }
+
+  .cdk-virtual-scroll-viewport::-webkit-scrollbar-thumb:hover {
+    background: #121520;
+  }
+  .mat-autocomplete-panel::-webkit-scrollbar {
+    width: 8px !important;
+    height: 8px !important;
+  }
+  .mat-autocomplete-panel::-webkit-scrollbar-track {
+    background: #00000007 !important;
+    border-radius: 5px !important;
+  }
+  .mat-autocomplete-panel::-webkit-scrollbar-thumb {
+    background: #121520 !important;
+    border-radius: 5px !important;
+  }
+
+  .mat-autocomplete-panel::-webkit-scrollbar-thumb:hover {
+    background: #121520 !important;
+  }
+}

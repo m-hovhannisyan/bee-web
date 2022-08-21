@@ -1,0 +1,10 @@
+<div class="w-100 h-100">
+  <div
+    class="mt-1 connection-item"
+    *ngFor="let connection of connections"
+    (click)="selectChat(connection)"
+    [ngClass]="{ selected: connection.email === connectionEmail }"
+  >
+    <app-connection-item [userInfo]="connection"></app-connection-item>
+  </div>
+</div>

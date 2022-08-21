@@ -1,0 +1,59 @@
+<div class="w-100 h-100 d-flex justify-content-center align-items-center">
+  <div class="sign-up-container" [formGroup]="signupForm">
+    <div class="title text-center">Sign Up</div>
+    <div class="mt-4">
+      <mat-form-field
+        class="example-full-width w-100"
+        color="primary"
+        appearance="fill"
+      >
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name" />
+      </mat-form-field>
+    </div>
+    <div class="">
+      <mat-form-field
+        class="example-full-width w-100"
+        color="primary"
+        appearance="fill"
+      >
+        <mat-label>Surname</mat-label>
+        <input matInput placeholder="Surname" formControlName="surname" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field
+        class="example-full-width w-100"
+        color="primary"
+        appearance="fill"
+      >
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field
+        class="example-full-width w-100"
+        color="primary"
+        appearance="fill"
+      >
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="password" formControlName="password" />
+      </mat-form-field>
+    </div>
+    <div class="wrong-email" *ngIf="emailErr">This email is already exist</div>
+    <div class="mt-3 text-center">
+      <button
+        mat-flat-button
+        color="primary"
+        class="signup-button"
+        (click)="saveForm()"
+      >
+        <div>SignUp</div>
+      </button>
+    </div>
+    <div class="mt-5 text-center box">
+      <div class="go-login" routerLink="/auth/login">Log In</div>
+    </div>
+  </div>
+</div>

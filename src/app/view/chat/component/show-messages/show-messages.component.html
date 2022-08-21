@@ -1,0 +1,51 @@
+<div class="w-100 h-100 position-relative">
+  <div class="title d-flex">
+    <div class="connection-name" *ngIf="connectionData">
+      {{ connectionData.name + " " + connectionData.surname }}
+    </div>
+  </div>
+  <div
+    class="messages-container scroll-design"
+    *ngIf="messages.length"
+    #selectContainer
+  >
+    <div class="w-100 message-item" *ngFor="let item of messages">
+      <div
+        class="d-flex justify-content-start mb-3"
+        *ngIf="item.sender_email !== userData?.email"
+      >
+        <div class="w-50">
+          <div class="name">
+            {{ connectionData.name + " " + connectionData.surname }}
+          </div>
+          <div class="message-box">
+            {{ item.message }}
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-end mb-3"
+        *ngIf="item.sender_email === userData?.email"
+      >
+        <div class="w-50">
+          <div class="text-right name">You</div>
+          <div class="your-message-box">
+            {{ item.message }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-message" [formGroup]="messageForm">
+    <app-form-field [color]="'accent'" class="mx-auto w-100">
+      <input
+        matInput
+        placeholder="Enter Your Message"
+        formControlName="message"
+      />
+      <div matSuffix (click)="sendMessage()" class="send-icon">
+        <mat-icon>send</mat-icon>
+      </div>
+    </app-form-field>
+  </div>
+</div>
